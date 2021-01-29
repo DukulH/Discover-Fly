@@ -30,7 +30,7 @@
 
     <!--Booking Section-->
     <main class="main-content container">
-        <div class="booking-form">
+        <div class="booking-form" id="form-area">
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button class="btn-style" onclick="successPage()">Book Now</button>
         </div>
 
         <div class="booking-content">
@@ -108,6 +108,14 @@
                 veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
                 voluptatibus quam</p>
         </div>
+        </section>
+        <section id="booking-confirmation-area" class="container bg-light w-75" style="margin-top:50px;padding-top:150px; border-radius: 10px; border: solid 2px lemonchiffon; height: 500px; display: none;">
+            <h1 class="text-center text-success">Booking successfully!!</h1>
+            <br>
+            <br>
+            <h5 class="text-center text-success">Your total number of first-class tickets are : <span id="first-class-ticket"> </span></h5>
+            <h5 class="text-center text-success">Your total number of economy-class tickets are : <span id="economy-class-ticket"> </span></h5>
+            <h5 class="text-center text-success">Your total amount, including 10% vat, is : <span id="total-price"> </span></h5>
         </section>
 
         <!--Thank You-->

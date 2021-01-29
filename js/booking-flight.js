@@ -19,12 +19,14 @@ function calculateGrandTotal() {
     const subTotal = firstClassCount * 150 + economyClassCount * 100;
     document.getElementById('sub-total').innerText = '$ ' + subTotal;
 
-    const tax = Math.round(subTotal * .1);
-    document.getElementById('vat').innerText = '$ ' + tax;
+    const vat = Math.round(subTotal * .1);
+    document.getElementById('vat').innerText = '$ ' + vat;
 
-    const grandTotal = subTotal + tax;
+    const grandTotal = subTotal + vat;
     document.getElementById('grand-total').innerText = '$ ' + grandTotal;
 }
+
+
 function getInputValue(quantity) {
     const quantityInput = document.getElementById(quantity + '-count');
 
@@ -32,3 +34,28 @@ function getInputValue(quantity) {
 
     return quantityCount;
 }
+
+function successPage() {
+    const checkBtn = document.getElementById('form-area');
+    checkBtn.style.display = 'none';
+
+    const checkOut = document.getElementById('booking-confirmation-area');
+    checkOut.style.display = 'block';
+    const firstClassTicketNum = getInputValue('first-class');
+    const economyClassTicketNum = getInputValue('economy-class');
+    var total = setInnerText('grand-total').innerText;
+    
+
+    console.log(total);
+
+     setInnerText('first-class-ticket').innerText =  firstClassTicketNum;
+     setInnerText('economy-class-ticket').innerText =  economyClassTicketNum;
+     setInnerText('total-price').innerText =  total;
+    
+
+}
+function setInnerText (id){
+ return document.getElementById(id);
+}
+
+
