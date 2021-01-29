@@ -12,7 +12,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -53,10 +53,10 @@
             <div class="input-group f-class">
                 <label for="">First Class ($150)</label>
                 <div class="input-group number-spinner">
-                    <button onclick="productChangeHandle('phone' , false , 1219)" class="btn btn-default mr-2"><i
+                    <button onclick="ticketPurchaseQuantity('first-class' , false)" class="btn btn-default mr-2"><i
                             class="fas fa-minus"></i></button>
-                    <input id="phone-count" type="number" class="form-control text-center" value="0">
-                    <button onclick="productChangeHandle('phone' , true , 1219)" class="btn btn-default ml-2"><i
+                    <input id="first-class-count" type="number" class="form-control text-center" value="0">
+                    <button onclick="ticketPurchaseQuantity('first-class' , true)" class="btn btn-default ml-2"><i
                             class="fas fa-plus"></i></button>
                 </div>
             </div>
@@ -64,10 +64,10 @@
             <div class="input-group f-class">
                 <label for="">Economy ($100)</label>
                 <div class="input-group number-spinner">
-                    <button onclick="productChangeHandle('phone' , false , 1219)" class="btn btn-default mr-2"><i
+                    <button onclick="ticketPurchaseQuantity('economy-class' , false)" class="btn btn-default mr-2"><i
                             class="fas fa-minus"></i></button>
-                    <input id="phone-count" type="number" class="form-control text-center" value="0">
-                    <button onclick="productChangeHandle('phone' , true , 1219)" class="btn btn-default ml-2"><i
+                    <input id="economy-class-count" type="number" class="form-control text-center" value="0">
+                    <button onclick="ticketPurchaseQuantity('economy-class' , true)" class="btn btn-default ml-2"><i
                             class="fas fa-plus"></i></button>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id="sub-total">$ 0</p>
                     </div>
                 </div>
 
@@ -86,7 +86,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="vat">$ 0</p>
                     </div>
                 </div>
                 <hr>
@@ -95,7 +95,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="grand-total">$ 0</p>
                     </div>
                 </div>
             </div>
@@ -111,6 +111,7 @@
         </section>
 
         <!--Thank You-->
+        <script src="js/booking-flight.js"></script>
 </body>
 
 </html>
