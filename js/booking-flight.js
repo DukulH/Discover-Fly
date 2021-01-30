@@ -41,12 +41,10 @@ function successPage() {
 
     const checkOut = document.getElementById('booking-confirmation-area');
     checkOut.style.display = 'block';
+    
     const firstClassTicketNum = getInputValue('first-class');
     const economyClassTicketNum = getInputValue('economy-class');
     var total = setInnerText('grand-total').innerText;
-    
-
-    console.log(total);
 
      setInnerText('first-class-ticket').innerText =  firstClassTicketNum;
      setInnerText('economy-class-ticket').innerText =  economyClassTicketNum;
